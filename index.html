@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNfragancias | Perfumería & Importación Mayorista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: { 400: '#facc15', 500: '#eab308', 600: '#ca8a04' },
+              darkbg: '#090d16'
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-darkbg text-slate-100 min-h-screen font-sans">
+
+    <!-- Banner Superior -->
+    <div class="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-black font-bold text-xs py-2 text-center tracking-widest uppercase shadow-lg">
+        ✨ Mayoristas de Testers Nacionales e Importados • Envíos a todo el país por Vía Cargo ✨
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center font-black text-slate-950 text-xl shadow-amber-500/20 shadow-lg">
+                    DN
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wider text-amber-400">DNFRAGANCIAS</h1>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">Luxury Perfumery & Testers</p>
+                </div>
+            </div>
+
+            <button id="cartBtn" onclick="toggleCart()" class="relative bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-4 py-2 rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-amber-500/20">
+                🛒 <span>Pedido</span>
+                <span id="cartCount" class="bg-slate-950 text-amber-400 text-xs px-2 py-0.5 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 py-10 text-center">
+        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest border border-amber-500/30 px-3 py-1 rounded-full bg-amber-500/10">Catálogo Exclusivo 2026</span>
+        <h2 class="text-4xl md:text-6xl font-black mt-4 mb-4 bg-gradient-to-r from-white via-slate-200 to-amber-300 bg-clip-text text-transparent">
+            Fragancias Árabes, Testers & Triple A
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mb-6">
+            Venta mayorista y minorista con despacho directo. Selección de perfumes a base de aceites con máxima fijación.
+        </p>
+    </section>
+
+    <!-- Filtros de Búsqueda -->
+    <section class="max-w-7xl mx-auto px-4 mb-8">
+        <div class="flex flex-col md:flex-row gap-4 justify-between items-center bg-slate-900 p-4 rounded-2xl border border-slate-800">
+            <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="🔍 Buscar por nombre o marca (ej: Bharara, Erba)..." class="w-full md:w-96 bg-slate-950 border border-slate-700 rounded-xl px-4 py-2 text-sm text-slate-200 focus:outline-none focus:border-amber-400">
+            
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <select id="categorySelect" onchange="filterProducts()" class="bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-xl px-4 py-2 focus:outline-none focus:border-amber-400 w-full md:w-auto">
+                    <option value="ALL">Todas las Categorías</option>
+                    <option value="Promociones">Promociones & Combos</option>
+                    <option value="TESTER 30ml">Tester 30ml</option>
+                    <option value="TRIPLE A ARABES">Triple A Árabes</option>
+                    <option value="TRIPLE A DISEÑADOR">Triple A Diseñador</option>
+                    <option value="TUBITOS">Tubitos Árabes & Diseñador</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grilla de Productos -->
+    <main class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="productGrid">
+        <!-- Renderizado dinámico vía JS -->
+    </main>
+
+    <!-- Carrito Lateral (Drawer) -->
+    <div id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-slate-900 border-l border-slate-800 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 z-50 shadow-2xl">
+        <div>
+            <div class="flex justify-between items-center pb-4 border-b border-slate-800">
+                <h3 class="text-lg font-bold text-amber-400">Tu Pedido Actual</h3>
+                <button onclick="toggleCart()" class="text-slate-400 hover:text-white text-xl font-bold">✕</button>
+            </div>
+            <div id="cartItems" class="mt-4 space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+                <!-- Items agregados -->
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-4">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-slate-400 font-medium">Total Estimado:</span>
+                <span id="cartTotal" class="text-2xl font-black text-emerald-400">$0</span>
+            </div>
+            <button onclick="sendWhatsApp()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-3 rounded-xl transition-all text-center flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                📲 Enviar Pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "10 Triple A Surtidos", category: "Promociones", price: 155000, desc: "Pack revendedor de alta salida.", tag: "PROMO MAYORISTA" },
+            { id: 2, name: "200 Tubitos Surtidos", category: "Promociones", price: 320000, desc: "Surtido completo de tubitos diseñador y árabes.", tag: "SUPER PACK" },
+            { id: 3, name: "Promo 50 Testers", category: "Promociones", price: 400000, desc: "50 fragancias tester a elección.", tag: "BEST SELLER" },
+            { id: 4, name: "BHARARA King", category: "TRIPLE A ARABES", price: 41500, desc: "Notas amaderadas y especiadas. Súper fijación.", tag: "ARABE" },
+            { id: 5, name: "ERBA PURA", category: "TESTER 30ml", price: 8500, desc: "Frutal y almizclado. Aceite concentrado.", tag: "TESTER 30ML" },
+            { id: 6, name: "Marshmallow 30ml Tester", category: "TESTER 30ml", price: 8500, desc: "Dulce, gourmand, excelente estela.", tag: "NUEVO" }
+        ];
+
+        let cart = [];
+
+        function renderProducts(list) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = list.map(p => `
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2 py-0.5 rounded-md">${p.tag}</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">${p.category}</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-100 group-hover:text-amber-400 transition-colors">${p.name}</h3>
+                        <p class="text-slate-400 text-xs mt-2 line-clamp-2">${p.desc}</p>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center pt-4 border-t border-slate-800/80">
+                        <span class="text-xl font-black text-emerald-400">$${p.price.toLocaleString('es-AR')}</span>
+                        <button onclick="addToCart(${p.id})" class="bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-slate-200 text-xs font-bold px-3 py-2 rounded-lg transition-all">
+                            + Agregar
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cat = document.getElementById('categorySelect').value;
+            const filtered = products.filter(p => {
+                const matchesQuery = p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+                const matchesCat = cat === 'ALL' || p.category === cat;
+                return matchesQuery && matchesCat;
+            });
+            renderProducts(filtered);
+        }
+
+        function addToCart(id) {
+            const prod = products.find(p => p.id === id);
+            const item = cart.find(i => i.id === id);
+            if (item) { item.qty++; } else { cart.push({ ...prod, qty: 1 }); }
+            updateCart();
+        }
+
+        function updateCart() {
+            document.getElementById('cartCount').innerText = cart.reduce((acc, i) => acc + i.qty, 0);
+            const itemsContainer = document.getElementById('cartItems');
+            let total = 0;
+            itemsContainer.innerHTML = cart.map(i => {
+                const subtotal = i.price * i.qty;
+                total += subtotal;
+                return `
+                    <div class="flex justify-between items-center bg-slate-950 p-3 rounded-xl border border-slate-800">
+                        <div>
+                            <p class="text-sm font-bold text-slate-200">${i.name}</p>
+                            <p class="text-xs text-emerald-400 font-semibold">$${i.price.toLocaleString('es-AR')} x ${i.qty}</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="changeQty(${i.id}, -1)" class="px-2 py-0.5 bg-slate-800 text-xs rounded hover:bg-slate-700">-</button>
+                            <button onclick="changeQty(${i.id}, 1)" class="px-2 py-0.5 bg-slate-800 text-xs rounded hover:bg-slate-700">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('cartTotal').innerText = `$${total.toLocaleString('es-AR')}`;
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+            }
+            updateCart();
+        }
+
+        function toggleCart() {
+            document.getElementById('cartDrawer').classList.toggle('translate-x-full');
+        }
+
+        function sendWhatsApp() {
+            if (cart.length === 0) return alert('El carrito está vacío');
+            let msg = '¡Hola DNfragancias! Quisiera realizar el siguiente pedido mayorista desde la web:\n\n';
+            let total = 0;
+            cart.forEach(i => {
+                const sub = i.price * i.qty;
+                total += sub;
+                msg += `• ${i.qty}x ${i.name} ($${sub.toLocaleString('es-AR')})\n`;
+            });
+            msg += `\n*Total Estimado: $${total.toLocaleString('es-AR')}*\n`;
+            msg += '¿Tienen stock disponible para despacho por Vía Cargo?';
+            window.open(`https://wa.me/5491140834591?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        renderProducts(products);
+    </script>
+</body>
+</html>
