@@ -23,7 +23,6 @@
     </script>
     <style>
         .neon-glow { box-shadow: 0 0 25px rgba(0, 229, 255, 0.25); }
-        .neon-border { border: 1px solid rgba(0, 229, 255, 0.3); }
         .glass { background: rgba(19, 27, 46, 0.7); backdrop-filter: blur(12px); }
     </style>
 </head>
@@ -31,7 +30,7 @@
 
     <!-- Top Bar -->
     <div class="bg-gradient-to-r from-dnBlue via-dnCyan to-dnBlue text-slate-950 font-extrabold text-[11px] py-2 text-center tracking-widest uppercase shadow-md">
-        ⚡ Importadores Directos • Local Físico • Envíos a todo el país vía Cargo ⚡
+        ⚡ Mayoristas de Testers Nacionales • Perfumes Triple A Árabes y Diseñador • Envíos Vía Cargo ⚡
     </div>
 
     <!-- Header / Navbar -->
@@ -62,41 +61,40 @@
     <section class="relative max-w-7xl mx-auto px-6 py-14 text-center overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-dnCyan/10 rounded-full blur-3xl -z-10"></div>
         <span class="inline-block text-dnCyan text-xs font-bold uppercase tracking-widest border border-dnCyan/30 px-4 py-1.5 rounded-full bg-dnCyan/10 mb-4">
-            Catálogo Mayorista & Minorista
+            Catálogo Oficial Pency
         </span>
         <h2 class="text-4xl md:text-6xl font-black tracking-tight text-white max-w-3xl mx-auto leading-tight">
             Fragancias de Lujo, Testers & <span class="bg-gradient-to-r from-dnCyan to-dnBlue bg-clip-text text-transparent">Árabes Triple A</span>
         </h2>
         <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base mt-4">
-            Testers a base de aceites esenciales de máxima fijación. Seleccioná tus productos y enviá tu orden directa a nuestro WhatsApp.
+            Venta mayorista y minorista con despacho directo. Seleccioná tus productos y armá tu pedido por WhatsApp.
         </p>
     </section>
 
-    <!-- Controles de Búsqueda y Filtros -->
+    <!-- Filtros -->
     <section class="max-w-7xl mx-auto px-6 mb-10">
         <div class="flex flex-col md:flex-row gap-4 justify-between items-center bg-dnCard p-4 rounded-2xl border border-slate-800">
             <div class="relative w-full md:w-96">
-                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Buscar fragancia o marca..." class="w-full bg-dnDark border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-dnCyan transition-colors">
+                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Buscar fragancia..." class="w-full bg-dnDark border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-dnCyan transition-colors">
                 <span class="absolute left-3.5 top-3 text-slate-500 text-sm">🔍</span>
             </div>
             
             <select id="categorySelect" onchange="filterProducts()" class="bg-dnDark border border-slate-800 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-dnCyan transition-colors w-full md:w-auto">
                 <option value="ALL">Todas las Categorías</option>
-                <option value="Promociones">Promociones & Combos</option>
                 <option value="TESTER 30ml">Tester 30ml</option>
                 <option value="TRIPLE A ARABES">Triple A Árabes</option>
                 <option value="TRIPLE A DISEÑADOR">Triple A Diseñador</option>
-                <option value="TUBITOS">Tubitos Árabes & Diseñador</option>
+                <option value="tubitos arabes">Tubitos Árabes</option>
             </select>
         </div>
     </section>
 
     <!-- Grilla de Productos -->
     <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20" id="productGrid">
-        <!-- JS Render -->
+        <!-- Renderizado dinámico -->
     </main>
 
-    <!-- Carrito Lateral (Drawer) -->
+    <!-- Carrito Lateral -->
     <div id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-dnCard border-l border-slate-800 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 z-50 shadow-2xl">
         <div>
             <div class="flex justify-between items-center pb-4 border-b border-slate-800">
@@ -105,9 +103,7 @@
                 </h3>
                 <button onclick="toggleCart()" class="text-slate-400 hover:text-white text-xl font-bold">✕</button>
             </div>
-            <div id="cartItems" class="mt-4 space-y-3 max-h-[60vh] overflow-y-auto pr-2">
-                <!-- Items del carrito -->
-            </div>
+            <div id="cartItems" class="mt-4 space-y-3 max-h-[60vh] overflow-y-auto pr-2"></div>
         </div>
 
         <div class="border-t border-slate-800 pt-4">
@@ -123,12 +119,12 @@
 
     <script>
         const products = [
-            { id: 1, name: "10 Triple A Surtidos", category: "Promociones", price: 155000, desc: "Pack revendedor de alta salida comercial.", tag: "MAYORISTA TOP" },
-            { id: 2, name: "200 Tubitos Surtidos", category: "Promociones", price: 320000, desc: "Surtido completo diseñador y árabes.", tag: "SUPER PACK" },
-            { id: 3, name: "Promo 50 Testers", category: "Promociones", price: 400000, desc: "50 fragancias tester de 30ml a elección.", tag: "BEST SELLER" },
-            { id: 4, name: "BHARARA King", category: "TRIPLE A ARABES", price: 41500, desc: "Notas amaderadas especiadas. Súper fijación.", tag: "ARABE" },
-            { id: 5, name: "ERBA PURA", category: "TESTER 30ml", price: 8500, desc: "Frutal y almizclado. Aceite concentrado.", tag: "TESTER 30ML" },
-            { id: 6, name: "Marshmallow 30ml Tester", category: "TESTER 30ml", price: 8500, desc: "Gourmand dulce con excelente estela.", tag: "NUEVO" }
+            { id: 1, name: "Bharara King Árabe", category: "TRIPLE A ARABES", price: 41500, desc: "Alta fijación, notas amaderadas y especiadas.", tag: "ÁRABE TOP" },
+            { id: 2, name: "Erba Pura Tester", category: "TESTER 30ml", price: 8500, desc: "Frutal y almizclado a base de aceites.", tag: "TESTER 30ML" },
+            { id: 3, name: "Marshmallow 30ml", category: "TESTER 30ml", price: 8500, desc: "Aroma gourmand dulce y duradero.", tag: "DESTACADO" },
+            { id: 4, name: "Asad Lattafa Árabe", category: "TRIPLE A ARABES", price: 45000, desc: "Carácter intenso, ámbar y especias.", tag: "IMPORTADO" },
+            { id: 5, name: "Yara Lattafa Rosa", category: "TRIPLE A ARABES", desc: "Dulce, avainillado y floral suave.", price: 44000, tag: "TENDENCIA" },
+            { id: 6, name: "Tubito Árabe Surtido", category: "tubitos arabes", price: 3500, desc: "Formato portátil ideal para cartera o bolsillo.", tag: "PORTÁTIL" }
         ];
 
         let cart = [];
@@ -215,7 +211,7 @@
 
         function sendWhatsApp() {
             if (cart.length === 0) return alert('El carrito está vacío');
-            let msg = '¡Hola DNfragancias! Quisiera realizar el siguiente pedido mayorista desde la web:\n\n';
+            let msg = '¡Hola DNfragancias! Quisiera realizar el siguiente pedido desde la web:\n\n';
             let total = 0;
             cart.forEach(i => {
                 const sub = i.price * i.qty;
