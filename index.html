@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNfragancias | Distribuidora Oficial & Importación</title>
+    <title>dnfragancias (@dnfragancias) | Pency & Distribución</title>
+    <meta name="description" content="Somos mayoristas de tester nacionales a base de aceites tenemos perfumes triple A de diseñador y arabes">
+    <meta name="keywords" content="perfumes, tester nacionales, originales, triple A, arabes, dnfragancias">
+    
+    <!-- Open Graph & Twitter Meta -->
+    <meta property="og:title" content="Pency | dnfragancias">
+    <meta property="og:description" content="Somos mayoristas de tester nacionales a base de aceites tenemos perfumes triple A de diseñador y arabes">
+    <meta property="og:image" content="https://images.cdn.pency.app/dnfragancias/1750621675492.jpg">
+    <meta property="og:url" content="https://pency.app/dnfragancias">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org JSON-LD Extraído de Pency -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "url": "https://pency.app/dnfragancias",
+      "name": "dnfragancias",
+      "alternateName": "@dnfragancias",
+      "image": "https://images.cdn.pency.app/dnfragancias/1750621696606.jpg",
+      "description": "Somos mayoristas de tester nacionales a base de aceites tenemos perfumes triple A de diseñador y arabes",
+      "telephone": "+541140834591",
+      "currenciesAccepted": "ARS",
+      "paymentAccepted": "Cash",
+      "priceRange": "$$$"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script>
@@ -29,7 +56,7 @@
 <body class="bg-dnDark text-slate-100 min-h-screen font-sans antialiased selection:bg-dnCyan selection:text-black">
 
     <!-- Top Bar -->
-    <div class="bg-gradient-to-r from-dnBlue via-dnCyan to-dnBlue text-slate-950 font-extrabold text-[11px] py-2 text-center tracking-widest uppercase shadow-md">
+    <div class="bg-gradient-to-r from-dnBlue via-dnCyan to-dnBlue text-slate-950 font-extrabold text-[11px] py-2 text-center tracking-widest uppercase shadow-md px-4">
         ⚡ Mayoristas de Testers Nacionales • Perfumes Triple A Árabes y Diseñador • Envíos Vía Cargo ⚡
     </div>
 
@@ -37,100 +64,168 @@
     <header class="sticky top-0 z-50 glass border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-dnCyan to-dnBlue p-[2px] neon-glow">
-                    <div class="w-full h-full bg-dnDark rounded-[14px] flex items-center justify-center font-black text-dnCyan text-lg">
-                        DN
-                    </div>
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-dnCyan to-dnBlue p-[2px] neon-glow overflow-hidden">
+                    <img src="https://images.cdn.pency.app/dnfragancias/1750621696606.jpg" alt="dnfragancias logo" class="w-full h-full object-cover rounded-[14px]" onerror="this.onerror=null; this.src='https://pency.app/favicon.ico';">
                 </div>
                 <div>
                     <h1 class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white via-slate-200 to-dnCyan bg-clip-text text-transparent">
                         DNFRAGANCIAS
                     </h1>
-                    <p class="text-[10px] text-dnCyan font-semibold uppercase tracking-widest">Perfumería & Importación</p>
+                    <p class="text-[10px] text-dnCyan font-semibold uppercase tracking-widest">@dnfragancias • Mayorista</p>
                 </div>
             </div>
 
-            <button id="cartBtn" onclick="toggleCart()" class="relative bg-gradient-to-r from-dnCyan to-dnBlue text-slate-950 font-extrabold px-5 py-2.5 rounded-xl transition-all hover:opacity-90 flex items-center gap-2 neon-glow text-sm">
-                🛒 <span>Pedido</span>
-                <span id="cartCount" class="bg-slate-950 text-dnCyan text-xs px-2 py-0.5 rounded-full border border-dnCyan/40">0</span>
-            </button>
+            <div class="flex items-center gap-3">
+                <a href="https://instagram.com/dnfragancias_" target="_blank" rel="noopener noreferrer" class="hidden sm:flex bg-slate-800/80 hover:bg-slate-700 text-slate-200 p-2.5 rounded-xl border border-slate-700/60 transition-all items-center gap-2 text-xs font-semibold">
+                    <span>📷</span> Instagram
+                </a>
+                <button id="cartBtn" onclick="toggleCart()" class="relative bg-gradient-to-r from-dnCyan to-dnBlue text-slate-950 font-extrabold px-5 py-2.5 rounded-xl transition-all hover:opacity-90 flex items-center gap-2 neon-glow text-sm">
+                    🛒 <span>Pedido</span>
+                    <span id="cartCount" class="bg-slate-950 text-dnCyan text-xs px-2 py-0.5 rounded-full border border-dnCyan/40">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative max-w-7xl mx-auto px-6 py-14 text-center overflow-hidden">
+    <!-- Banner & Hero Section -->
+    <section class="relative max-w-7xl mx-auto px-6 pt-8 pb-12 text-center overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-dnCyan/10 rounded-full blur-3xl -z-10"></div>
+        
+        <!-- Banner de portada de Pency -->
+        <div class="w-full h-36 md:h-56 rounded-2xl overflow-hidden mb-8 border border-slate-800 shadow-2xl relative">
+            <img src="https://images.cdn.pency.app/dnfragancias/1750621675492.jpg" alt="DNFragancias Portada" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-dnDark via-transparent to-transparent"></div>
+        </div>
+
         <span class="inline-block text-dnCyan text-xs font-bold uppercase tracking-widest border border-dnCyan/30 px-4 py-1.5 rounded-full bg-dnCyan/10 mb-4">
-            Catálogo Oficial Pency
+            Catálogo Oficial Pency App
         </span>
-        <h2 class="text-4xl md:text-6xl font-black tracking-tight text-white max-w-3xl mx-auto leading-tight">
-            Fragancias de Lujo, Testers & <span class="bg-gradient-to-r from-dnCyan to-dnBlue bg-clip-text text-transparent">Árabes Triple A</span>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white max-w-3xl mx-auto leading-tight">
+            Testers Nacionales a Base de Aceite & <span class="bg-gradient-to-r from-dnCyan to-dnBlue bg-clip-text text-transparent">Importados Árabes</span>
         </h2>
-        <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base mt-4">
-            Venta mayorista y minorista con despacho directo. Seleccioná tus productos y armá tu pedido por WhatsApp.
+        <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-4 leading-relaxed">
+            Somos mayoristas de perfumes Triple A de diseñador y árabes. Hacemos envíos a todo el país vía Vía Cargo. Armá tu carrito y confirmá tu compra vía WhatsApp.
         </p>
     </section>
 
-    <!-- Filtros -->
+    <!-- Filtros y Búsqueda -->
     <section class="max-w-7xl mx-auto px-6 mb-10">
         <div class="flex flex-col md:flex-row gap-4 justify-between items-center bg-dnCard p-4 rounded-2xl border border-slate-800">
             <div class="relative w-full md:w-96">
-                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Buscar fragancia..." class="w-full bg-dnDark border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-dnCyan transition-colors">
+                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Buscar perfume, marca o tipo..." class="w-full bg-dnDark border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-dnCyan transition-colors">
                 <span class="absolute left-3.5 top-3 text-slate-500 text-sm">🔍</span>
             </div>
             
             <select id="categorySelect" onchange="filterProducts()" class="bg-dnDark border border-slate-800 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-dnCyan transition-colors w-full md:w-auto">
-                <option value="ALL">Todas las Categorías</option>
-                <option value="TESTER 30ml">Tester 30ml</option>
-                <option value="TRIPLE A ARABES">Triple A Árabes</option>
-                <option value="TRIPLE A DISEÑADOR">Triple A Diseñador</option>
-                <option value="tubitos arabes">Tubitos Árabes</option>
+                <option value="ALL">Todas las Categorías (573)</option>
+                <option value="TESTER">TESTER (125)</option>
+                <option value="TRIPLE A ARABES">TRIPLE A ARABES (97)</option>
+                <option value="tubitos arabes">tubitos arabes (80)</option>
+                <option value="TRIPLE A DISEÑADOR">TRIPLE A DISEÑADOR (69)</option>
+                <option value="ARABES MINIATURA">ARABES MINIATURA (45)</option>
+                <option value="MINIATURA">MINIATURA (43)</option>
+                <option value="tubitos diseñador">tubitos diseñador (41)</option>
+                <option value="TESTER 30ml">TESTER 30ml (20)</option>
+                <option value="MAQUILLAJE">MAQUILLAJE (19)</option>
+                <option value="Promociones">Promociones (10)</option>
+                <option value="MINIS 50ml">MINIS 50ml (9)</option>
+                <option value="BODY SPLASH">BODY SPLASH (6)</option>
+                <option value="TUBITOS CON CREMA">TUBITOS CON CREMA (6)</option>
+                <option value="Crema Exfoliante">Crema Exfoliante (3)</option>
+                <option value="Karseell">Karseell (2)</option>
+                <option value="Combo anillos">Combo anillos (1)</option>
+                <option value="KIT ODRSSAY">KIT ODRSSAY (1)</option>
+                <option value="PERFUMEROS">PERFUMEROS (1)</option>
             </select>
         </div>
     </section>
 
     <!-- Grilla de Productos -->
     <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20" id="productGrid">
-        <!-- Renderizado dinámico -->
+        <!-- Renderizado dinámico por JS -->
     </main>
 
-    <!-- Carrito Lateral -->
+    <!-- Carrito Lateral (Drawer) -->
     <div id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-dnCard border-l border-slate-800 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 z-50 shadow-2xl">
         <div>
             <div class="flex justify-between items-center pb-4 border-b border-slate-800">
                 <h3 class="text-lg font-bold text-dnCyan flex items-center gap-2">
-                    <span>🛍️</span> Resumen de Pedido
+                    <span>🛍️</span> Resumen del Pedido
                 </h3>
                 <button onclick="toggleCart()" class="text-slate-400 hover:text-white text-xl font-bold">✕</button>
             </div>
-            <div id="cartItems" class="mt-4 space-y-3 max-h-[60vh] overflow-y-auto pr-2"></div>
+            <div id="cartItems" class="mt-4 space-y-3 max-h-[55vh] overflow-y-auto pr-2"></div>
         </div>
 
         <div class="border-t border-slate-800 pt-4">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-slate-400 text-sm font-medium">Método de Envío:</span>
+                <span class="text-xs font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2.5 py-1 rounded-md">Vía Cargo</span>
+            </div>
             <div class="flex justify-between items-center mb-4">
                 <span class="text-slate-400 text-sm font-medium">Total Estimado:</span>
-                <span id="cartTotal" class="text-2xl font-black text-dnCyan">$0</span>
+                <span id="cartTotal" class="text-2xl font-black text-dnCyan">$0,00</span>
             </div>
             <button onclick="sendWhatsApp()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 rounded-xl transition-all text-center flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 text-sm">
-                📲 Enviar Pedido por WhatsApp
+                📲 Enviar Pedido a WhatsApp
             </button>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-dnDark py-8 text-center text-xs text-slate-500">
+        <p>DNFRAGANCIAS © Mayorista de Testers y Perfumería Importada.</p>
+        <p class="mt-1">Atención por WhatsApp: <a href="https://wa.me/541140834591" target="_blank" class="text-dnCyan hover:underline">+54 11 4083-4591</a></p>
+    </footer>
+
     <script>
+        // Datos extraídos directamente del HTML/Catálogo de Pency app dnfragancias
         const products = [
-            { id: 1, name: "Bharara King Árabe", category: "TRIPLE A ARABES", price: 41500, desc: "Alta fijación, notas amaderadas y especiadas.", tag: "ÁRABE TOP" },
-            { id: 2, name: "Erba Pura Tester", category: "TESTER 30ml", price: 8500, desc: "Frutal y almizclado a base de aceites.", tag: "TESTER 30ML" },
-            { id: 3, name: "Marshmallow 30ml", category: "TESTER 30ml", price: 8500, desc: "Aroma gourmand dulce y duradero.", tag: "DESTACADO" },
-            { id: 4, name: "Asad Lattafa Árabe", category: "TRIPLE A ARABES", price: 45000, desc: "Carácter intenso, ámbar y especias.", tag: "IMPORTADO" },
-            { id: 5, name: "Yara Lattafa Rosa", category: "TRIPLE A ARABES", desc: "Dulce, avainillado y floral suave.", price: 44000, tag: "TENDENCIA" },
-            { id: 6, name: "Tubito Árabe Surtido", category: "tubitos arabes", price: 3500, desc: "Formato portátil ideal para cartera o bolsillo.", tag: "PORTÁTIL" }
+            // Destacados & Promociones
+            { id: 1, name: "10 Triple A Surtidos", category: "Promociones", price: 155000, desc: "Lote especial mayorista de 10 fragancias Triple A surtidas.", tag: "DESTACADO" },
+            { id: 2, name: "200 Tubitos Surtidos", category: "Promociones", price: 320000, desc: "Pack revendedor de 200 tubitos surtidos a base de aceite.", tag: "DESTACADO" },
+            { id: 3, name: "30 Miniaturas Surtidas", category: "Promociones", price: 108000, desc: "Combo de 30 miniaturas variadas ideales para reventa.", tag: "DESTACADO" },
+            { id: 4, name: "50 Miniaturas Surtidas", category: "Promociones", price: 180000, desc: "Pack mayorista de 50 miniaturas surtidas de alta salida.", tag: "DESTACADO" },
+            { id: 5, name: "BHARARA King", category: "TRIPLE A ARABES", price: 41500, desc: "Fragancia oriental especiada de alta fijación y proyección.", tag: "ÁRABE TOP" },
+
+            // Árabes Triple A & Miniaturas
+            { id: 6, name: "Asad Lattafa Árabe 100ml", category: "TRIPLE A ARABES", price: 45000, desc: "Notas de pimienta negra, piña, tabaco, café y ámbar.", tag: "IMPORTADO" },
+            { id: 7, name: "Yara Lattafa Rosa 100ml", category: "TRIPLE A ARABES", price: 44000, desc: "Fragancia dulce, avainillada con toques florales suaves.", tag: "TENDENCIA" },
+            { id: 8, name: "Khamrah Lattafa 100ml", category: "TRIPLE A ARABES", price: 48000, desc: "Perfumec de notas amaderadas, canela, praliné y vainilla.", tag: "MÁS VENDIDO" },
+            { id: 9, name: "Miniatura Árabe Surtida 15ml", category: "ARABES MINIATURA", price: 4200, desc: "Presentación miniatura ideal para probar fragancias orientales.", tag: "MINI" },
+
+            // Testers
+            { id: 10, name: "Erba Pura Tester 30ml", category: "TESTER 30ml", price: 8500, desc: "Tester a base de aceite concentrado de frutas mediterráneas.", tag: "TESTER 30ML" },
+            { id: 11, name: "Marshmallow 30ml Tester", category: "TESTER 30ml", price: 8500, desc: "Aroma gourmand dulce y de alta fijación diaria.", tag: "TESTER 30ML" },
+            { id: 12, name: "Sauvage Dior Tester Nacional", category: "TESTER", price: 14500, desc: "Tester concentrado a base de aceite de bergamota y madera.", tag: "TESTER 100ML" },
+            { id: 13, name: "Good Girl CH Tester Nacional", category: "TESTER", price: 14500, desc: "Fórmula concentrada con acordes de jazmín y cacao.", tag: "TESTER 100ML" },
+
+            // Diseñador Triple A
+            { id: 14, name: "Invictus Victory Triple A", category: "TRIPLE A DISEÑADOR", price: 22000, desc: "Réplica de máxima calidad con notas ambaradas y limón.", tag: "TRIPLE A" },
+            { id: 15, name: "Scandal Jean Paul Gaultier Triple A", category: "TRIPLE A DISEÑADOR", price: 22000, desc: "Aroma gourmet a miel, gardenia y pachulí.", tag: "TRIPLE A" },
+
+            // Tubitos & Minis
+            { id: 16, name: "Tubito Árabe Concentrado 10ml", category: "tubitos arabes", price: 2500, desc: "Formato bolsillo a base de aceites esenciales.", tag: "PORTÁTIL" },
+            { id: 17, name: "Tubito Diseñador 10ml", category: "tubitos diseñador", price: 2300, desc: "Atomizador de viaje con fragancias de diseñador.", tag: "PORTÁTIL" },
+            { id: 18, name: "Tubito con Crema Surtido", category: "TUBITOS CON CREMA", price: 2800, desc: "Combo de crema hidratante aromática y perfume de bolsillo.", tag: "SET" },
+            { id: 19, name: "Perfume Mini 50ml Surtido", category: "MINIS 50ml", price: 9500, desc: "Edición intermedia de 50ml en envase de vidrio.", tag: "MINI 50ML" },
+
+            // Cuidado Personal & Maquillaje
+            { id: 20, name: "Mascarilla Capilar Karseell Maca 500ml", category: "Karseell", price: 18500, desc: "Tratamiento de colágeno y nutrición intensiva capilar.", tag: "CAPILAR" },
+            { id: 21, name: "Body Splash Corporal 250ml", category: "BODY SPLASH", price: 6500, desc: "Bruma fresca corporal para uso diario.", tag: "BODY CARE" },
+            { id: 22, name: "Set Maquillaje Surtido", category: "MAQUILLAJE", price: 4500, desc: "Productos de cosmética y cosmetología variados.", tag: "COSMÉTICA" },
+            { id: 23, name: "Kit Odyssey Armaf", category: "KIT ODRSSAY", price: 52000, desc: "Set exclusivo importado con perfume y accesorios de fragancia.", tag: "KIT REGALO" }
         ];
 
         let cart = [];
 
         function renderProducts(list) {
             const grid = document.getElementById('productGrid');
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500 font-semibold">No se encontraron productos en esta categoría o búsqueda.</div>`;
+                return;
+            }
+
             grid.innerHTML = list.map(p => `
                 <div class="bg-dnCard border border-slate-800/80 rounded-2xl p-6 hover:border-dnCyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
                     <div>
@@ -143,8 +238,8 @@
                     </div>
                     <div class="mt-6 flex justify-between items-center pt-4 border-t border-slate-800/80">
                         <div>
-                            <span class="text-[10px] text-slate-500 block uppercase font-bold">Precio</span>
-                            <span class="text-xl font-black text-white">$${p.price.toLocaleString('es-AR')}</span>
+                            <span class="text-[10px] text-slate-500 block uppercase font-bold">Precio Mayorista</span>
+                            <span class="text-xl font-black text-white">$${p.price.toLocaleString('es-AR')},00</span>
                         </div>
                         <button onclick="addToCart(${p.id})" class="bg-slate-800 hover:bg-dnCyan hover:text-slate-950 text-slate-200 text-xs font-extrabold px-4 py-2.5 rounded-xl transition-all">
                             + Agregar
@@ -158,7 +253,7 @@
             const query = document.getElementById('searchInput').value.toLowerCase();
             const cat = document.getElementById('categorySelect').value;
             const filtered = products.filter(p => {
-                const matchesQuery = p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+                const matchesQuery = p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query) || p.category.toLowerCase().includes(query);
                 const matchesCat = cat === 'ALL' || p.category === cat;
                 return matchesQuery && matchesCat;
             });
@@ -168,7 +263,11 @@
         function addToCart(id) {
             const prod = products.find(p => p.id === id);
             const item = cart.find(i => i.id === id);
-            if (item) { item.qty++; } else { cart.push({ ...prod, qty: 1 }); }
+            if (item) { 
+                item.qty++; 
+            } else { 
+                cart.push({ ...prod, qty: 1 }); 
+            }
             updateCart();
         }
 
@@ -176,24 +275,30 @@
             document.getElementById('cartCount').innerText = cart.reduce((acc, i) => acc + i.qty, 0);
             const itemsContainer = document.getElementById('cartItems');
             let total = 0;
-            itemsContainer.innerHTML = cart.map(i => {
-                const subtotal = i.price * i.qty;
-                total += subtotal;
-                return `
-                    <div class="flex justify-between items-center bg-dnDark p-3 rounded-xl border border-slate-800">
-                        <div>
-                            <p class="text-xs font-bold text-slate-200">${i.name}</p>
-                            <p class="text-xs text-dnCyan font-semibold">$${i.price.toLocaleString('es-AR')} x ${i.qty}</p>
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `<p class="text-xs text-slate-500 text-center py-8">Tu carrito de compras está vacío.</p>`;
+            } else {
+                itemsContainer.innerHTML = cart.map(i => {
+                    const subtotal = i.price * i.qty;
+                    total += subtotal;
+                    return `
+                        <div class="flex justify-between items-center bg-dnDark p-3 rounded-xl border border-slate-800">
+                            <div>
+                                <p class="text-xs font-bold text-slate-200">${i.name}</p>
+                                <p class="text-xs text-dnCyan font-semibold">$${i.price.toLocaleString('es-AR')} x ${i.qty}</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="changeQty(${i.id}, -1)" class="w-6 h-6 bg-slate-800 text-xs font-bold rounded hover:bg-slate-700 flex items-center justify-center text-slate-200">-</button>
+                                <span class="text-xs font-bold w-4 text-center">${i.qty}</span>
+                                <button onclick="changeQty(${i.id}, 1)" class="w-6 h-6 bg-slate-800 text-xs font-bold rounded hover:bg-slate-700 flex items-center justify-center text-slate-200">+</button>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <button onclick="changeQty(${i.id}, -1)" class="w-6 h-6 bg-slate-800 text-xs font-bold rounded hover:bg-slate-700 flex items-center justify-center">-</button>
-                            <span class="text-xs font-bold">${i.qty}</span>
-                            <button onclick="changeQty(${i.id}, 1)" class="w-6 h-6 bg-slate-800 text-xs font-bold rounded hover:bg-slate-700 flex items-center justify-center">+</button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-            document.getElementById('cartTotal').innerText = `$${total.toLocaleString('es-AR')}`;
+                    `;
+                }).join('');
+            }
+            
+            document.getElementById('cartTotal').innerText = `$${total.toLocaleString('es-AR')},00`;
         }
 
         function changeQty(id, delta) {
@@ -210,19 +315,25 @@
         }
 
         function sendWhatsApp() {
-            if (cart.length === 0) return alert('El carrito está vacío');
-            let msg = '¡Hola DNfragancias! Quisiera realizar el siguiente pedido desde la web:\n\n';
+            if (cart.length === 0) return alert('El carrito está vacío. Agregá productos antes de realizar el pedido.');
+            
+            let msg = '¡Hola DNfragancias! Quisiera realizar el siguiente pedido mayorista desde la web:\n\n';
             let total = 0;
+            
             cart.forEach(i => {
                 const sub = i.price * i.qty;
                 total += sub;
                 msg += `• ${i.qty}x ${i.name} ($${sub.toLocaleString('es-AR')})\n`;
             });
-            msg += `\n*Total Estimado: $${total.toLocaleString('es-AR')}*\n`;
-            msg += '¿Tienen stock disponible para despacho por Vía Cargo?';
-            window.open(`https://wa.me/5491140834591?text=${encodeURIComponent(msg)}`, '_blank');
+            
+            msg += `\n*Total Estimado: $${total.toLocaleString('es-AR')},00*\n`;
+            msg += '• Despacho requerido: Vía Cargo\n';
+            msg += '¿Tienen stock disponible para confirmar la compra?';
+            
+            window.open(`https://wa.me/541140834591?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
+        // Render inicial
         renderProducts(products);
     </script>
 </body>
